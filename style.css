@@ -1,0 +1,107 @@
+body {
+  margin: 0;
+  height: 100vh;
+}
+
+.docs-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font: 100% "Roboto", sans-serif;
+}
+.docs-list__item {
+  position: relative;
+  padding-left: 30px;
+}
+.docs-list__item:before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 100%;
+  background-color: rgb(89, 89, 89);
+  left: 10px;
+}
+.docs-list__folder-wrapper {
+  display: flex;
+  align-items: flex-end;
+  position: relative;
+}
+.docs-list__folder-wrapper:before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 2px;
+  background-color: rgb(89, 89, 89);
+  left: -8px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.docs-list__button {
+  width: 23px;
+  height: 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  position: absolute;
+  left: -30px;
+  top: 0;
+  border: 2px solid rgb(74, 133, 255);
+  border-radius: 3px;
+  background-color: #ffffff;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.docs-list__button:hover {
+  border-color: rgb(184, 188, 208);
+}
+.docs-list__add-icon, .docs-list__remove-icon {
+  display: none;
+}
+.docs-list__add-icon_active, .docs-list__remove-icon_active {
+  width: 15px;
+  height: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(74, 133, 255);
+}
+.docs-list__add-icon_active:hover, .docs-list__remove-icon_active:hover {
+  color: rgb(184, 188, 208);
+}
+.docs-list__folder-icon {
+  color: rgb(74, 133, 255);
+  padding-right: 4px;
+}
+.docs-list__folder-title {
+  font-size: 16px;
+  line-height: 21px;
+  color: rgb(89, 89, 89);
+}
+.docs-list__doc-link {
+  display: inline-flex;
+  align-items: flex-end;
+  position: relative;
+  text-decoration: none;
+  cursor: pointer;
+}
+.docs-list__doc-link:before {
+  content: "";
+  position: absolute;
+  width: 17px;
+  height: 2px;
+  background-color: rgb(89, 89, 89);
+  left: -18px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+.docs-list__doc-icon {
+  color: #b8bcd0;
+  padding-right: 3px;
+}
+.docs-list__doc-title {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 21px;
+  color: rgb(89, 89, 89);
+}/*# sourceMappingURL=style.css.map */

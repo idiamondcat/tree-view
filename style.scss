@@ -1,0 +1,130 @@
+$text-color: rgba(89, 89, 89, 1);;
+$main-color: rgba(74, 133, 255, 1);
+$extra-color: rgba(184, 188, 208, 1);
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+.docs-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font: 100% "Roboto", sans-serif;
+
+    &__item {
+        position: relative;
+        padding-left: 30px;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 2px;
+            height: 100%;
+            background-color: $text-color;
+            left: 10px;
+        }
+    }
+
+    &__folder-wrapper {
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 10px;
+            height: 2px;
+            background-color: $text-color;
+            left: -8px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__button {
+        width: 23px;
+        height: 23px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-sizing: border-box;
+        position: absolute;
+        left: -30px;
+        top: 0;
+        border: 2px solid $main-color;
+        border-radius: 3px;
+        background-color: #ffffff;
+        margin-right: 10px;
+        cursor: pointer;
+
+        &:hover {
+            border-color: $extra-color;
+        }
+    }
+
+    &__add-icon,
+    &__remove-icon {
+        display: none;
+
+        &_active {
+            width: 15px;
+            height: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $main-color;
+
+            &:hover {
+                color: $extra-color;
+            }
+
+        }
+    }
+
+    &__folder-icon {
+        color: $main-color;
+        padding-right: 4px;
+    }
+
+    &__folder-title {
+        font-size: 16px;
+        line-height: 21px;
+        color: $text-color;
+    }
+
+
+    &__doc-link {
+        display: inline-flex;
+        align-items: flex-end;
+        position: relative;
+        text-decoration: none;
+        cursor: pointer;
+
+        &:before {
+            content: "";
+            position: absolute;
+            width: 17px;
+            height: 2px;
+            background-color: $text-color;
+            left: -18px;
+            top: 50%;
+            transform: translate(0, -50%);
+        }
+    }
+
+    &__doc-icon {
+        color: #b8bcd0;
+        padding-right: 3px;
+    }
+
+    &__doc-title {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 21px;
+        color: $text-color;
+    }
+
+}
